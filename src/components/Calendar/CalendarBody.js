@@ -1,3 +1,7 @@
-const CalendarBody = () => {};
+const CalendarBody = () => {
+    return (
+        
+    );
+};
 
 export default CalendarBody;
