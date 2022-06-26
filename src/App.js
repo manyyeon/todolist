@@ -1,20 +1,16 @@
-import { createGlobalStyle } from "styled-components";
 import TodoTemplate from "./components/Todo/TodoTemplate";
 import CalendarTemplate from "./components/Calendar/CalendarTemplate";
+import styles from "./styles/App.module.scss";
+import classNames from "classnames/bind";
 
-const GlobalStyle = createGlobalStyle`
-body {
-  background: #e9ecef;
-}
-`;
+const cx = classNames.bind(styles);
 
 function App() {
   return (
-    <>
-      <GlobalStyle />
+    <div className={cx("App")}>
       <TodoTemplate />
       <CalendarTemplate />
-    </>
+    </div>
   );
 }
 
