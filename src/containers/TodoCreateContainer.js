@@ -11,7 +11,6 @@ function TodoCreateContainer() {
   const onToggle = useCallback((id) => dispatch(toggleTodo(id)), [dispatch]);
   const onDelete = useCallback((id) => dispatch(deleteTodo(id)), [dispatch]);
 
-  useEffect(() => console.log(todos), [todos]);
   return (
     <TodoCreate
       todos={todos}

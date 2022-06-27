@@ -27,7 +27,6 @@ const TodoItem = ({ todo, onToggle, onDelete }) => {
           color="#adb5bd"
           onClick={() => {
             setIsChecked(true);
-            console.log(todo.id);
             onToggle(todo.id);
           }}
         />
