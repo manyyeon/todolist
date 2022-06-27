@@ -1,11 +1,25 @@
+$backgroundGray: #e9ecef;
+$red: #e53935;
+
 .TodoItem {
   display: flex;
   align-items: center;
-  padding-left: 0px;
+
   padding: 0.5rem;
   font-size: 1.5rem;
   font-weight: 400;
+
   .Button {
     cursor: pointer;
+  }
+  .Text {
+    margin: 0.5rem;
+    padding-left: 0px;
+  }
+  .Trash {
+    color: $backgroundGray;
+    &:hover {
+      color: $red;
+    }
   }
 }

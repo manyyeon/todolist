@@ -6,7 +6,7 @@ import classNames from "classnames/bind";
 
 const cx = classNames.bind(styles);
 
-const TodoCreate = ({ todos, onCreate, onToggle }) => {
+const TodoCreate = ({ todos, onCreate, onToggle, onDelete }) => {
   const [text, setText] = useState("");
   const [isPlusButtonClicked, setIsPlusButtonClicked] = useState(false);
   const onChange = (e) => setText(e.target.value);
@@ -49,7 +49,12 @@ const TodoCreate = ({ todos, onCreate, onToggle }) => {
         )}
       </div>
 
-      <TodoList className={cx("TodoList")} todos={todos} onToggle={onToggle} />
+      <TodoList
+        className={cx("TodoList")}
+        todos={todos}
+        onToggle={onToggle}
+        onDelete={onDelete}
+      />
     </div>
   );
 };
