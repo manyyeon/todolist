@@ -23,6 +23,7 @@
   margin-top: 8px;
   border: solid 0.1rem white;
   border-radius: 0.4rem;
+  cursor: pointer;
 }
 .react-calendar__navigation button:enabled:hover,
 .react-calendar__navigation button:enabled:focus {
@@ -42,6 +43,7 @@ abbr[title] {
   border: solid 0.1rem white;
   background-color: white;
   margin-bottom: 0.4rem;
+  cursor: pointer;
 }
 .react-calendar__tile:enabled:hover,
 .react-calendar__tile:enabled:focus {
