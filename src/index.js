@@ -3,11 +3,11 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
-import { createStoreHook } from "react-redux";
+import { createStore } from "redux";
 import rootReducer from "./modules";
 import App from "./App";
 
-const store = createStoreHook(rootReducer);
+const store = createStore(rootReducer);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
