@@ -1,0 +1,11 @@
+.TodoItem {
+  display: flex;
+  align-items: center;
+  padding-left: 0px;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  .Button {
+    cursor: pointer;
+  }
+}

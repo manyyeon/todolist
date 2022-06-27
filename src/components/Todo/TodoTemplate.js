@@ -10,7 +10,6 @@ const TodoTemplate = () => {
   return (
     <div className={cx("TodoTemplate")}>
       <TodoHead />
-      <TodoList />
       <TodoCreateContainer />
     </div>
   );
