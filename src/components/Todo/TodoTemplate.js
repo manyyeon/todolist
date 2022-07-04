@@ -1,4 +1,3 @@
-import TodoList from "./TodoList";
 import TodoCreateContainer from "../../containers/TodoCreateContainer";
 import styles from "../../styles/TodoTemplate.module.scss";
 import { useEffect, useState } from "react";

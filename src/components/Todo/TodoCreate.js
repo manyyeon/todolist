@@ -1,5 +1,5 @@
 import { useState } from "react";
-import TodoList from "./TodoList";
+import TodoItem from "../Todo/TodoItem";
 import { BsFillPlusCircleFill, BsXCircleFill } from "react-icons/bs";
 import styles from "../../styles/TodoCreate.module.scss";
 import classNames from "classnames/bind";
@@ -49,12 +49,17 @@ const TodoCreate = ({ todos, onCreate, onToggle, onDelete }) => {
         )}
       </div>
 
-      <TodoList
-        className={cx("TodoList")}
-        todos={todos}
-        onToggle={onToggle}
-        onDelete={onDelete}
-      />
+      <ul className={cx("TodoList")}>
+        {todos &&
+          todos.map((todo) => (
+            <TodoItem
+              key={todo.id}
+              todo={todo}
+              onToggle={onToggle}
+              onDelete={onDelete}
+            />
+          ))}
+      </ul>
     </div>
   );
 };
