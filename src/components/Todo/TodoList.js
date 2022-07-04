@@ -1,12 +1,12 @@
 import { useState } from "react";
-import TodoItem from "../Todo/TodoItem";
+import TodoItem from "./TodoItem";
 import { BsFillPlusCircleFill, BsXCircleFill } from "react-icons/bs";
-import styles from "../../styles/TodoCreate.module.scss";
+import styles from "../../styles/TodoList.module.scss";
 import classNames from "classnames/bind";
 
 const cx = classNames.bind(styles);
 
-const TodoCreate = ({ todos, onCreate, onToggle, onDelete }) => {
+const TodoList = ({ todos, onCreate, onToggle, onDelete }) => {
   const [text, setText] = useState("");
   const [isPlusButtonClicked, setIsPlusButtonClicked] = useState(false);
   const onChange = (e) => setText(e.target.value);
@@ -49,7 +49,7 @@ const TodoCreate = ({ todos, onCreate, onToggle, onDelete }) => {
         )}
       </div>
 
-      <ul className={cx("TodoList")}>
+      <ul className={cx("Todos")}>
         {todos &&
           todos.map((todo) => (
             <TodoItem
@@ -64,4 +64,4 @@ const TodoCreate = ({ todos, onCreate, onToggle, onDelete }) => {
   );
 };
 
-export default TodoCreate;
+export default TodoList;

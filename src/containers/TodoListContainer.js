@@ -1,9 +1,9 @@
 import { useCallback, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import TodoCreate from "../components/Todo/TodoCreate";
+import TodoList from "../components/Todo/TodoList";
 import { addTodo, toggleTodo, deleteTodo } from "../modules/todos";
 
-function TodoCreateContainer() {
+function TodoListContainer() {
   const todos = useSelector((state) => state.todos);
   const dispatch = useDispatch();
 
@@ -12,7 +12,7 @@ function TodoCreateContainer() {
   const onDelete = useCallback((id) => dispatch(deleteTodo(id)), [dispatch]);
 
   return (
-    <TodoCreate
+    <TodoList
       todos={todos}
       onCreate={onCreate}
       onToggle={onToggle}
@@ -21,4 +21,4 @@ function TodoCreateContainer() {
   );
 }
 
-export default TodoCreateContainer;
+export default TodoListContainer;

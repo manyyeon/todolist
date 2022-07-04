@@ -1,4 +1,4 @@
-import TodoCreateContainer from "../../containers/TodoCreateContainer";
+import TodoListContainer from "../../containers/TodoListContainer";
 import styles from "../../styles/TodoTemplate.module.scss";
 import { useEffect, useState } from "react";
 import classNames from "classnames/bind";
@@ -37,7 +37,7 @@ const TodoTemplate = () => {
           요일
         </div>
       </div>
-      <TodoCreateContainer />
+      <TodoListContainer />
     </div>
   );
 };
