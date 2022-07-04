@@ -1,14 +1,13 @@
 import { BsCheckCircle, BsCircle } from "react-icons/bs";
 import { FaTrashAlt } from "react-icons/fa";
-import styles from "../../styles/TodoItem.module.scss";
+import styles from "../../styles/TodoItemView.module.scss";
 import classNames from "classnames/bind";
-import { useEffect, useState } from "react";
 
 const cx = classNames.bind(styles);
 
 const TodoItemView = ({ todo, isChecked, onCheck, onUncheck, onRemove }) => {
   return (
-    <div className={cx("TodoItem")}>
+    <div className={cx("TodoItemView")}>
       {isChecked ? (
         <BsCheckCircle
           className={cx("Button")}
